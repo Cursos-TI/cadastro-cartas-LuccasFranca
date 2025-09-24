@@ -6,14 +6,22 @@
 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
+  char estado[50];
+  char codigo[5];   // Ex: "A01"
   char cidade[50];
   int populacao, turismo;
   float km, pib;
 
   // Área para entrada de dados
   printf("Bem-Vindo ao Super Trunfo! \n");
+
+  printf("Digite o nome do Estado: \n");
+  scanf(" %[^\n]", estado);
   
-  printf("Digite o nome da Cidade: \n");
+  printf("Digite o codigo da carta: \n");
+  scanf("%s", &codigo);
+
+  printf("Digite o nome da cidade: \n");
   scanf(" %[^\n]", cidade);
 
   printf("Digite o numero aproximado da população: \n");
@@ -30,11 +38,13 @@ int main() {
   
   // Área para exibição dos dados da cidade
   printf("DADOS DA CIDADE\n");
+  printf("Estado: %s\n", estado);
+  printf("Codigo da Carta: %s\n", codigo);
   printf("Cidade: %s\n", cidade);
   printf("Populacao: %d\n", populacao);
   printf("Km: %f\n", km);
   printf("Pontos turisticos: %d\n", turismo);
-  printf("PIB: %f Bilhoes\n", pib);
+  printf("PIB: R$%f Bilhoes\n", pib);
 
   
 return 0;
