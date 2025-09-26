@@ -21,7 +21,7 @@ int main() {
   scanf(" %[^\n]", estado1);
   
   printf("Digite o codigo da carta 1: \n");
-  scanf("%s", &codigo1);
+  scanf("%s", codigo1);
 
   printf("Digite o nome da cidade: \n");
   scanf(" %[^\n]", cidade1);
@@ -44,13 +44,13 @@ int main() {
   scanf(" %[^\n]", estado2);
 
   printf("Digite o código da carta 2: \n");
-  scanf("%s", &codigo2);
+  scanf("%s", codigo2);
 
   printf("Digite o nome da cidade: \n");
   scanf(" %[^\n]", cidade2);
 
-  printf("Digite o numero aproximado da popula;áo: \n");
-  scanf("%f", &populacao2);
+  printf("Digite o numero aproximado da população: \n");
+  scanf("%d", &populacao2);
 
   printf("Digite quantos Km aproximadamente tem a cidade: \n");
   scanf("%f", &km2);
@@ -59,7 +59,7 @@ int main() {
   scanf("%d", &turismo2);
 
   printf("Digite o PIB aproximado da cidade: \n");
-  scanf("%f", pib2);
+  scanf("%f", &pib2);
 
   // Área para exibição dos dados da cidade
   printf("CARTA 1\n");
