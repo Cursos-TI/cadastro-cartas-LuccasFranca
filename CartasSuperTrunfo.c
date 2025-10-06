@@ -6,12 +6,14 @@
 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
-  char estado1[50], codigo1[5], cidade1[50];
-  char estado2[50], codigo2[5], cidade2[50];
+  char estado1[50], codigo1[6], cidade1[50];
+  char estado2[50], codigo2[6], cidade2[50];
   int populacao1, turismo1;
   int populacao2, turismo2;
   float km1, pib1;
   float km2, pib2;
+  float pibcap1, pibcap2;
+  float kmp1, kmp2;
 
   // Área para entrada de dados
   printf("Bem-Vindo ao Super Trunfo! \n");
@@ -61,6 +63,9 @@ int main() {
   printf("Digite o PIB aproximado da cidade: \n");
   scanf("%f", &pib2);
 
+  kmp1 = (float) populacao1 / km1;
+  kmp2 = (float) populacao2 / km2;
+
   // Área para exibição dos dados da cidade
   printf("\nCARTA 1\n");
   printf("Estado: %s\n", estado1);
@@ -70,7 +75,8 @@ int main() {
   printf("Área: %.2f km² \n", km1);
   printf("Pontos turisticos: %d\n", turismo1);
   printf("PIB: R$%.2f Bilhões de reais\n", pib1);
-  
+  printf("Densidade Populacional: %.2f hab/km²\n", kmp1);
+
   printf("\nCARTA 2\n");
   printf("Estado: %s\n", estado2);
   printf("Código da Carta 2: %s\n", codigo2);
@@ -79,6 +85,7 @@ int main() {
   printf("Área: %.2f km²\n", km2);
   printf("Pontos turisticos: %d\n", turismo2);
   printf("PIB: R$%.2f Bilhões de reais\n", pib2);
+  printf("Densidade Populacional: %.2f hab/km²\n", kmp2);
 
   
 return 0;
