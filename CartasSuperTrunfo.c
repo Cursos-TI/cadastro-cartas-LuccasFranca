@@ -65,6 +65,8 @@ int main() {
 
   kmp1 = (float) populacao1 / km1;
   kmp2 = (float) populacao2 / km2;
+  pibcap1 = (float) populacao1 / pib1;
+  pibcap2 = (float) populacao2 / pib2;
 
   // Área para exibição dos dados da cidade
   printf("\nCARTA 1\n");
@@ -76,6 +78,7 @@ int main() {
   printf("Pontos turisticos: %d\n", turismo1);
   printf("PIB: R$%.2f Bilhões de reais\n", pib1);
   printf("Densidade Populacional: %.2f hab/km²\n", kmp1);
+  printf("PIB per Cap: %.2f Reais\n", pibcap1);
 
   printf("\nCARTA 2\n");
   printf("Estado: %s\n", estado2);
@@ -86,6 +89,7 @@ int main() {
   printf("Pontos turisticos: %d\n", turismo2);
   printf("PIB: R$%.2f Bilhões de reais\n", pib2);
   printf("Densidade Populacional: %.2f hab/km²\n", kmp2);
+  printf("PIB per Cap: %.2f Reais\n", pibcap2);
 
   
 return 0;
