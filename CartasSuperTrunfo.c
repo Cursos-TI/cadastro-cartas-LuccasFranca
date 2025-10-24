@@ -98,7 +98,7 @@ int main() {
   printf("PIB per Cap: %.2f Reais\n", pibcap2);
   printf("Super Poder: %.2f\n", super2);
 
-  // comparacoes
+  /* comparacoes 1
   printf("\n Comparações\n");
   printf("População: Carta 1 venceu (%d)\n", populacao1 > populacao2);
   printf("Área: Carta 1 venceu (%d)\n", km1 > km2);
@@ -107,8 +107,54 @@ int main() {
   printf("Densidade Populacional: Carta 1 venceu (%d)\n", kmp1 < kmp2);
   printf("PIB per Capita: Carta 1 venceu (%d)\n", pibcap1 > pibcap2);
   printf("Super Poder: Carta 1 vence (%d)\n", super1 > super2);
+  */
 
+  // Comparacoes de todos os atributos
+  printf("\n======COMPARACAO DE ATRIBUTOS======\n");
 
+  //populacao
+  printf("\nAtributo: Populacao\n");
+  if (populacao1 > populacao2){
+    printf("Vencedora: Carta 1 (%s) com %lu habitantes\n", cidade1, populacao1);
+  }else {
+    printf("Vencedora: Carta 2 (%s) com %lu habitantes\n", cidade2, populacao2);
+  }
+  //KM
+  printf("\nAtributo: KM\n");
+  if (km1 > km2){
+    printf("Vencedora: Carta 1 (%s) com %.2f km²\n", cidade1, km1); 
+  }else {
+    printf("Vencedora: Carta 2 (%s) com %2.f km²\n", cidade2, km2);
+  }
+  //PIB
+  printf("\nAtributo: PIB\n");
+  if (pib1 > pib2){
+    printf("Vencedora: Carta 1 (%s) com R$ %.2f bilhoes", cidade1, pib1);
+  }else {
+    printf("Vencedora: Carta 2 (%s) com R$ %.2f bilhoes", cidade2, pib2);
+  }
+  //densidade populacional (menor vence)
+  printf("\nAtributo: Densidade populacional\n");
+  if (kmp1 < kmp2){
+    printf("Vencedora: Carta 1 (%s) com %.2f hab/km² (menor é melhor)\n", cidade1, kmp1);
+  }else {
+    printf("Vencedora: Carta 2 (%s) com %.2f hab/km² (menor é melhor)\n", cidade2, kmp2);
+  }
+  //PIB per capita
+  printf("\nAtributo: PIB per capita\n");
+  if (pibcap1 > pibcap2){
+    printf("Vencedora: Carta 1 (%s) com %.2f por haitante\n", cidade1, pibcap1);
+  }else {
+    printf("Vencedora: Carta 2 (%s) com %.2f por habitante\n", cidade2, pibcap2);
+  }
+  //pontos turisticos
+  printf("\nAtributo: ponto turistico\n");
+  if (turismo1 > turismo2){
+    printf("Vencedora: Carta 1 (%s) com %d prontos turisticos\n", cidade1, turismo1);
+  }else {
+    printf("Vencedora: Carta 2 (%s) com %d pontos turisticos\n", cidade2, turismo2);
+  }
+  printf("\nFim\n");
   
 return 0;
 } 
