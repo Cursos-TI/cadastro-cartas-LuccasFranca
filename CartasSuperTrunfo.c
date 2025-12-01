@@ -30,7 +30,7 @@ float getValor(int atributo, int carta,
     float pibcap1, pibcap2, kmp1, kmp2;
 
     //estrada da carta 1
-    printf("===super trunfo===\nCadastro da primeira carta");
+    printf("===super trunfo===\nCadastro da primeira carta\n");
 
     printf("Estado: ");
     scanf(" %[^\n]", estado1);
@@ -105,6 +105,72 @@ float getValor(int atributo, int carta,
     if (op1 > 1 || op1 > 6){
       printf("opcao invalida!\n");
     }
+
+    //escolha do segundo atributo
+    printf("Escolha o segundo atributo(diferente do primeiro):\n");
+
+    switch (op1)
+    {
+    case 1:
+      printf("2 - Area\n3 - PIB\n4 - Pontos turistico\n5 - Densidade demografica\n6 - PIB per capita\n");
+      break;
+    case 2:
+      printf("1 - Populacao\n3 - PIB\n4 - Pontos turisticos\n5 - Densidade demografica\n6 - PIB per capita\n");
+      break;
+    case 3:
+      printf("1 -Populacao\n2 - Area\n4 - Pontos turisticos\n5 - Densidade demografica\n6 - PIB per capita\n");
+      break;
+    case 4:
+      printf("1 - População\n2 - Área\n3 - PIB\n5 - Densidade demográfica\n6 - PIB per capita\n");
+      break;
+    case 5:
+      printf("1 - População\n2 - Área\n3 - PIB\n4 - Pontos turísticos\n6 - PIB per capita\n");
+      break;
+    case 6:
+      printf("1 - População\n2 - Área\n3 - PIB\n4 - Pontos turísticos\n5 - Densidade demográfica\n");
+      break;
+    }
+
+    printf("->");
+    scanf("%d", &op2);
+
+    if (op2 < 1 || op2 > 6 || op2 == op1){
+      printf("Opcao invalida!");
+      return 0;
+    }
+
+    //pegando valores dos atributos
+    float v1a = getValor(op1, 1, populacao1, populacao2, km1, km2, pib1, pib2, turismo1, turismo2, kmp1, kmp2, pibcap1, pibcap2);
+    float v1b = getValor(op1, 1, populacao1, populacao2, km1, km2, pib1, pib2, turismo1, turismo2, kmp1, kmp2, pibcap1, pibcap2);
+
+    float v2a = getValor(op1, 2, populacao1, populacao2, km1, km2, pib1, pib2, turismo1, turismo2, kmp1, kmp2, pibcap1, pibcap2);
+    float v2b = getValor(op1, 2, populacao1, populacao2, km1, km2, pib1, pib2, turismo1, turismo2, kmp1, kmp2, pibcap1, pibcap2);
+    
+    //comparacao
+    float soma1 = v1a + v1b;
+    float soma2 = v2a + v2b;
+
+    //Resultado
+
+    printf("Resultado\n");
+
+    printf("Cidade 1: %s\n", cidade1);
+    printf("Cidade 2: %s\n\n", cidade2);
+
+    printf("Atributos escolhidos: %d e %d\n\n", op1, op2);
+
+    printf("valores\n");
+    printf("%s -> %.2f e %.2f (soma: %.2f)\n", cidade1, v1a, v1b, soma1);
+    printf("%s -> %.2f e %.2f (soma: %.2f)\n\n", cidade2, v2a, v2b, soma2);
+    
+    if (soma1 > soma2)
+      printf("vencedora: %s!\n", cidade1);
+    else if (soma2 > soma1)
+      printf("vencedora: %s!\n", cidade2);
+    else
+      printf("Empate!\n");
+
+    return 0;
   }
 
 
